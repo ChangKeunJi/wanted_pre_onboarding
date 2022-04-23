@@ -1,8 +1,7 @@
 import "./style.scss";
 import { DarkIcon, LightIcon } from "../../assets/icon";
 
-const Toggle = ({ rounded = true, isToggle, onToggle }) => {
-	console.log(isToggle);
+const Toggle = ({ isToggle, onToggle }) => {
 	return (
 		<>
 			<label className="toggle">

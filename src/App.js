@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Toggle from "./components/Toggle";
-import Layout from "./components/Layout";
+import Container from "./components/Container";
 import "./scss/index.scss";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="page">
 			<Toggle isToggle={isToggle} onToggle={() => setIsToggle(!isToggle)} />
-			{/* <Layout /> */}
+			<Container />
 		</div>
 	);
 }

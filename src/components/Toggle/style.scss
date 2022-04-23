@@ -1,7 +1,9 @@
 @import '../../scss/variable.scss';
 
 .toggle {
-  position: relative;
+  position: absolute;
+  top:2rem;
+  right: 2rem;
   display: inline-block;
   width: 100px;
   height: 50px;

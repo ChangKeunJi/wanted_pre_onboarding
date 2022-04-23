@@ -2,3 +2,17 @@ $color-gray-0:#ddd;
 $color-gray-1:#aaa;
 
 $color-white-0:#fff;
+
+// ---------------------
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

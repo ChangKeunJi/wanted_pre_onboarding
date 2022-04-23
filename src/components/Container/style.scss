@@ -1,0 +1,17 @@
+@import '../../scss/variable.scss';
+
+.container {
+  width: 70%;
+  height: 70%;
+  border: 3px solid $color-gray-1;
+
+  &__tabs {
+    height: 15%;
+  }
+
+  &__display {
+    padding:2rem;
+    height: 85%;
+  }
+}
+
