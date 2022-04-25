@@ -7,6 +7,7 @@ import Slider from "../Slider";
 import Input from "../Input";
 import { TAB_MENU } from "../../constants/TAB_MENU";
 import { useTheme } from "../../utils/ThemeContext";
+import Dropdown from "../Dropdown";
 
 const Container = () => {
 	// 현재 활성화된 탭의 상태를 저장.
@@ -22,6 +23,7 @@ const Container = () => {
 			<div className="container__display">
 				{curTab === 0 && <Slider />}
 				{curTab === 1 && <Input />}
+				{curTab === 2 && <Dropdown />}
 			</div>
 		</div>
 	);
