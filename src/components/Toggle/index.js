@@ -4,6 +4,8 @@ import { useTheme, useThemeUpdate } from "../../utils/ThemeContext";
 
 const Toggle = () => {
 	const theme = useTheme();
+
+	// context 상태 업데이트 함수 : 토글 클릭할 때마다 theme 상태 변한다.
 	const onToggleTheme = useThemeUpdate();
 
 	return (

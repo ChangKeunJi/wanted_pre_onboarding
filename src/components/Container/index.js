@@ -9,7 +9,9 @@ import { TAB_MENU } from "../../constants/TAB_MENU";
 import { useTheme } from "../../utils/ThemeContext";
 
 const Container = () => {
+	// 현재 활성화된 탭의 상태를 저장.
 	const [curTab, setCurTab] = useState(0);
+
 	const theme = useTheme();
 
 	return (

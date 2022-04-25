@@ -9,10 +9,12 @@ const Slider = () => {
 
 	const [value, setValue] = useState(0);
 
+	// 슬라이더를 움직일 때마다 input value 업데이트.
 	const handleSlider = useCallback((e) => {
 		setValue(e.target.value);
 	}, []);
 
+	// 퍼센테이지 클릭할 때 타겟의 숫자만큼 value 업데이트.
 	const onClickTarget = useCallback((e) => {
 		setValue(e.target.dataset.num);
 	}, []);

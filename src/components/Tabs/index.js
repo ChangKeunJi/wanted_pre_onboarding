@@ -6,6 +6,7 @@ import { useTheme } from "../../utils/ThemeContext";
 const Tabs = ({ curTab, onChange, tabList }) => {
 	const theme = useTheme();
 
+	// 다른 탭을 클릭할 때마다 현재 탭의 상태 업데이트.
 	const onClick = useCallback((tab) => () => onChange(tab.id), [onChange]);
 
 	return (
