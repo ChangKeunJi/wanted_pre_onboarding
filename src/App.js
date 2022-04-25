@@ -1,5 +1,3 @@
-import { useCallback, useState } from "react";
-
 import Toggle from "./components/Toggle";
 import Container from "./components/Container";
 import { ThemeProvider } from "./utils/ThemeContext";

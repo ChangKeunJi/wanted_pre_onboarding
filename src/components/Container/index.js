@@ -4,7 +4,6 @@ import "./style.scss";
 import Tabs from "../Tabs";
 import Slider from "../Slider";
 import { TAB_MENU } from "../../constants/TAB_MENU";
-import { useTheme } from "../../utils/ThemeContext";
 
 const Container = () => {
 	const [curTab, setCurTab] = useState(0);

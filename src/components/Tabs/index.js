@@ -1,12 +1,15 @@
 import "./style.scss";
 import classnames from "classnames";
 import { useCallback } from "react";
+import { useTheme } from "../../utils/ThemeContext";
 
 const Tabs = ({ curTab, onChange, tabList }) => {
+	const theme = useTheme();
+
 	const onClick = useCallback((tab) => () => onChange(tab.id), [onChange]);
 
 	return (
-		<div className="tabs">
+		<div className={classnames("tabs", { "--dark": theme })}>
 			<ul className="tabs__wrap">
 				{tabList.map((tab) => {
 					return (
