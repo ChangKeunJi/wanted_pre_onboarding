@@ -1,7 +1,10 @@
 import "./style.scss";
 import classnames from "classnames";
+import { useCallback } from "react";
 
 const Tabs = ({ curTab, onChange, tabList }) => {
+	const onClick = useCallback((tab) => () => onChange(tab.id), [onChange]);
+
 	return (
 		<div className="tabs">
 			<ul className="tabs__wrap">
@@ -12,7 +15,7 @@ const Tabs = ({ curTab, onChange, tabList }) => {
 							className={classnames("tabs__wrap__item", {
 								"--active": curTab === tab.id,
 							})}
-							onClick={() => onChange(tab.id)}
+							onClick={onClick(tab)}
 						>
 							{tab.label}
 						</li>
