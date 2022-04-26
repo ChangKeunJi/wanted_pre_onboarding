@@ -39,7 +39,7 @@
 
   &__modal {
     &__wrapper {
-      background-color: #eee;
+      background-color: $color-gray-2;
       position: relative;
       border: 2px solid $color-gray-1;
       border-radius: 7px;
@@ -74,4 +74,25 @@
   }
 
 
+}
+
+.--dark {
+  .dropdown {
+    input {
+      color:$color-gray-1;
+    }
+
+    &__modal {
+      &__wrapper {
+        background-color: $color-black-2;
+
+        &__item {
+          color: $color-gray-1;
+          &:hover {
+            background-color: $color-black-1;
+          }
+        }
+      }
+    }
+  }
 }

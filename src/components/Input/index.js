@@ -62,14 +62,14 @@ const Input = () => {
 					<input
 						value={emailValue}
 						onChange={onChangeEmail}
-						className="input__email__input"
+						className="icon input__email__input"
 						id="email"
 						type="email"
 						onBlur={() => setEmailFocused(false)}
 						onFocus={() => setEmailFocused(true)}
 					/>
 					<img
-						className="input__email__icon"
+						className="icon input__email__icon"
 						src={emailValidate ? CheckSign : CheckSignGray}
 						alt="email-check"
 						ref={emailInputRef}
