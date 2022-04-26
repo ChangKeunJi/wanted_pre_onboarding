@@ -9,23 +9,21 @@ const Toggle = () => {
 	const onToggleTheme = useThemeUpdate();
 
 	return (
-		<>
-			<label className="toggle">
-				<input type="checkbox" checked={theme} onChange={onToggleTheme} />
-				<span className="toggle-slider">
-					<img
-						className="toggle-icon toggle-slider__dark"
-						src={DarkIcon}
-						alt="darkicon"
-					/>
-					<img
-						className="toggle-icon toggle-slider__light"
-						src={LightIcon}
-						alt="lighticon"
-					/>
-				</span>
-			</label>
-		</>
+		<label className="toggle">
+			<input type="checkbox" checked={theme} onChange={onToggleTheme} />
+			<span className="toggle-slider">
+				<img
+					className="toggle-icon toggle-slider__dark"
+					src={DarkIcon}
+					alt="darkicon"
+				/>
+				<img
+					className="toggle-icon toggle-slider__light"
+					src={LightIcon}
+					alt="lighticon"
+				/>
+			</span>
+		</label>
 	);
 };
 
