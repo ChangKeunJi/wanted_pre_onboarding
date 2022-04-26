@@ -47,6 +47,15 @@
 
 ```
 
+### 특징 
+
+- 여러 컴포넌트를 탭을 이용하여 한 페이지 내에서 모두 볼 수 있도록 만들었습니다. 
+
+- 토글에 다크모드 기능을 적용하였습니다. 다크모드 상태는 context api로 관리합니다. 
+
+- 상수 데이터와 공통 색상 스타일을 파일로 관리하여 유지보수에 용이하게 만들었습니다. 
+
+
 ## 컴포넌트 설명
 
 
@@ -93,28 +102,34 @@
 - CSS에서 '--active' 클래스 소유 여부와 몇번 째 자식인지 여부에 따라서 슬라이드 애니메이션이 움직입니다. 
 
 ```
-// 다른 탭을 클릭할 때마다 현재 탭의 상태 업데이트.
-const onClick = useCallback((tab) => () => onChange(tab.id), [onChange]);
+// 선택된 탭에는 '--active' 클래스가 추가됨.
 
+{tabList.map((tab) => {
+  return (
+    <li
+      key={tab.id}
+      className={classnames("tabs__wrap__item", {
+        "--active": curTab === tab.id,
+      })}
+      onClick={onClick(tab)}
+    >
+      {tab.label}
+    </li>
+  );
+})}
 
-<div className={classnames("tabs", { "--dark": theme })}>
-  <ul className="tabs__wrap">
-    {tabList.map((tab) => {
-      return (
-        <li
-          key={tab.id}
-          className={classnames("tabs__wrap__item", {
-            "--active": curTab === tab.id,
-          })}
-          onClick={onClick(tab)}
-        >
-          {tab.label}
-        </li>
-      );
-    })}
-    <li className="tabs__wrap__slider"></li>
-  </ul>
-</div>
+// 스타일에서 '--acive' 클래스 소유 여부에 따라 스타일 변경
+
+&:first-child.--active ~ .tabs__wrap__slider {
+  transform: translateX(0) scaleX(0.333);
+}
+&:nth-child(2).--active ~ .tabs__wrap__slider {
+  transform: translateX(33.333%) scaleX(0.333);
+}
+&:nth-child(3).--active ~ .tabs__wrap__slider {
+  transform: translateX(calc(33.333% * 2)) scaleX(0.333);
+}
+
 ```
 
 ### 3. 슬라이더 
