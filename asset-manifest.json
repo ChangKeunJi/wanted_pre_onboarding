@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/wanted_pre_onboarding/static/css/main.7b55e536.css",
+    "main.js": "/wanted_pre_onboarding/static/js/main.b5f64043.js",
+    "static/media/password.svg": "/wanted_pre_onboarding/static/media/password.707a4a6cf6ca899462ab4069ff1efd82.svg",
+    "static/media/password_watch.svg": "/wanted_pre_onboarding/static/media/password_watch.551fd6af3fb69ab8aee34239827b3c0c.svg",
+    "static/media/light.svg": "/wanted_pre_onboarding/static/media/light.7d281a2e26d205922bdd4cfd259e53d0.svg",
+    "static/media/check.svg": "/wanted_pre_onboarding/static/media/check.fc684acf4eff822b4ebf22317312f197.svg",
+    "static/media/search.svg": "/wanted_pre_onboarding/static/media/search.bb5f4a37d60e1341fbfd4909ec9f8c13.svg",
+    "index.html": "/wanted_pre_onboarding/index.html",
+    "static/media/arrow_bottom.svg": "/wanted_pre_onboarding/static/media/arrow_bottom.6206b56049232cb1e69a8926d0517fc2.svg",
+    "static/media/dark.svg": "/wanted_pre_onboarding/static/media/dark.01d0feddcec0fe5ce9548fc2ceaf656a.svg",
+    "static/media/check-gray.svg": "/wanted_pre_onboarding/static/media/check-gray.fd721273cd0386e1bafc6c5f8f0463f0.svg",
+    "main.7b55e536.css.map": "/wanted_pre_onboarding/static/css/main.7b55e536.css.map",
+    "main.b5f64043.js.map": "/wanted_pre_onboarding/static/js/main.b5f64043.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b55e536.css",
+    "static/js/main.b5f64043.js"
+  ]
+}
