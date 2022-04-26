@@ -28,8 +28,8 @@
 |
 |--- scss                 
 |    |--- index.js
-|    |--- reset.scss 
-|    |--- variable.scss
+|    |--- reset.scss       
+|    |--- variable.scss   
 |
 |--- constants             : 각종 데이터들 
 |    |--- DROPDOWN_MENU.js
@@ -243,6 +243,20 @@ useEffect(() => {
 }, [modalInput]);
 
 ```
+
+### 다크모드 
+![darkmode](https://user-images.githubusercontent.com/46767604/165224854-53e62060-e5c0-4112-8069-755e5df446a3.gif)
+
+과제내에 포함되지 않았지만, 토글 컴포넌트를 만들면서 의미있는 작업을 수행했으면 해서 만들었습니다. 
+
+#### 🟢 설명
+
+- context api를 사용하여 토글 컴포넌트에서 작동할 때마다 다크모드 전역 상태가 변경됩니다. 
+
+- 다크모드가 true일 때 각 컴포넌트 내 최상위 태그에 '--dark'가 추가되며, 그에따라 스타일이 변합니다. 
+
+- 모든 색상 스타일은 variable.scss에서 작성된 변수를 사용하여 일관성있게 그리고 유지보수 하기 쉽게 작성했습니다. 
+
 
 
 
