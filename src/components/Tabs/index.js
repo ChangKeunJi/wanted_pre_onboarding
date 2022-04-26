@@ -25,7 +25,6 @@ const Tabs = ({ curTab, onChange, tabList }) => {
 						</li>
 					);
 				})}
-
 				<li className="tabs__wrap__slider"></li>
 			</ul>
 		</div>

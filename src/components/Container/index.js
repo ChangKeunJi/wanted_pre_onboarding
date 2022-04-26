@@ -1,30 +1,28 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./style.scss";
 
 import classnames from "classnames";
 import Tabs from "../Tabs";
-import Slider from "../Slider";
-import Input from "../Input";
 import { TAB_MENU } from "../../constants/TAB_MENU";
 import { useTheme } from "../../utils/ThemeContext";
-import Dropdown from "../Dropdown";
 
 const Container = () => {
+	const theme = useTheme();
+
 	// 현재 활성화된 탭의 상태를 저장.
 	const [curTab, setCurTab] = useState(0);
 
-	const theme = useTheme();
+	// 선택된 탭의 콘텐츠를 렌더링.
+	const renderCurTabContent = useCallback(() => {
+		return TAB_MENU.filter((tab) => tab.id === curTab)[0].component;
+	}, [curTab]);
 
 	return (
 		<div className={classnames("container", { "--dark": theme })}>
 			<div className="container__tabs">
 				<Tabs curTab={curTab} onChange={setCurTab} tabList={TAB_MENU} />
 			</div>
-			<div className="container__display">
-				{curTab === 0 && <Slider />}
-				{curTab === 1 && <Input />}
-				{curTab === 2 && <Dropdown />}
-			</div>
+			<div className="container__content">{renderCurTabContent()}</div>
 		</div>
 	);
 };

@@ -5,5 +5,11 @@
   font-family: sans-serif;
   height: 100vh;
   position:relative;
-  @include flex-center;
+  @include flex-center;  
+
+  &.--dark {
+    background-color: $color-black-2;
+  }
 }
+
+

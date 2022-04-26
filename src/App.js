@@ -1,15 +1,15 @@
 import Toggle from "./components/Toggle";
 import Container from "./components/Container";
-import { ThemeProvider } from "./utils/ThemeContext";
+import { useTheme } from "./utils/ThemeContext";
 import "./scss/index.scss";
+import classnames from "classnames";
 
 function App() {
+	const theme = useTheme();
 	return (
-		<div className="page">
-			<ThemeProvider>
-				<Toggle />
-				<Container />
-			</ThemeProvider>
+		<div className={classnames("page", { "--dark": theme })}>
+			<Toggle />
+			<Container />
 		</div>
 	);
 }
