@@ -6,17 +6,18 @@
   border: 3px solid $color-gray-1;
   border-radius: 20px;
   overflow: hidden;
-  &__tabs {
-    height: 15%;
-  }
 
-  &__content {
-    @include flex-center;
-    height: 85%;
-  }
-
-  &.--dark {
-  border: 3px solid $color-black-1;
-  }
 }
 
+.tabs {
+  height: 15%;
+}
+
+.content {
+  @include flex-center;
+  height: 85%;
+}
+
+.dark {
+border: 3px solid $color-black-1;
+}
