@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import './style.scss'
+import styles from './style.module.scss'
 import { useTheme } from '../../utils/ThemeContext'
 import { SLIDER_TARGET } from '../../constants/SLIDER_TARGET'
 import classnames from 'classnames'
@@ -20,17 +20,17 @@ function Slider() {
   }, [])
 
   return (
-    <div className={classnames('slider', { '--dark': theme })}>
-      <div className='slider__result-box'>
+    <div className={classnames(styles.slider, { '--dark': theme })}>
+      <div className={styles.resultBox}>
         <p>
           {value} <span>%</span>
         </p>
       </div>
-      <input type='range' min={0} max={100} onChange={handleSlider} className='slider__input' />
-      <ul className='slider__target'>
+      <input type='range' min={0} max={100} onChange={handleSlider} className={styles.input} />
+      <ul className={styles.target}>
         {SLIDER_TARGET.map((target, i) => {
           return (
-            <button type='button' key={i} onClick={onClickTarget} data-num={target} className='slider__target__item'>
+            <button type='button' key={i} onClick={onClickTarget} data-num={target} className={styles.targetItem}>
               {target}%
             </button>
           )

@@ -1,7 +1,7 @@
 import { useTheme } from '../../utils/ThemeContext'
 import classnames from 'classnames'
 import { useCallback, useEffect, useState } from 'react'
-import './styles.scss'
+import styles from './styles.module.scss'
 import { ArrowBottom, Search } from '../../assets/icon/index'
 import useInput from '../../utils/useInput'
 import { DROPDOWN_ITEM } from '../../constants/DROPDOWN_ITEM'
@@ -43,26 +43,21 @@ function Dropdown() {
   }, [modalInput])
 
   return (
-    <div className={classnames('dropdown', { '--dark': theme })}>
-      <div aria-hidden='true' className='dropdown__main' onClick={onClickInput}>
+    <div className={classnames(styles.dropdown, { 'styles.dark': theme })}>
+      <div aria-hidden='true' className={styles.dropdownMain} onClick={onClickInput}>
         <input readOnly value={mainInput} />
-        <img className='dropdown__main__arrow' src={ArrowBottom} alt='arrow' />
+        <img className={styles.dropdownMainArrow} src={ArrowBottom} alt='arrow' />
       </div>
       {isModalOpen && (
-        <div className='dropdown__modal'>
-          <div className='dropdown__modal__wrapper'>
+        <div className={styles.modal}>
+          <div className={styles.modalWrapper}>
             <input value={modalInput} onChange={onChangeModalInput} />
-            <img className='dropdown__modal__wrapper__search' src={Search} alt='search' />
+            <img className={styles.modalSearch} src={Search} alt='search' />
 
             <ul>
               {itemList.map((item) => {
                 return (
-                  <button
-                    type='button'
-                    onClick={onClickItem(item)}
-                    className='dropdown__modal__wrapper__item'
-                    key={item.id}
-                  >
+                  <button type='button' onClick={onClickItem(item)} className={styles.modalItem} key={item.id}>
                     {item.value}
                   </button>
                 )

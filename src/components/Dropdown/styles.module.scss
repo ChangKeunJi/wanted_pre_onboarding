@@ -1,0 +1,97 @@
+@import '../../scss/variable.scss';
+
+.dropdown {
+  width: 70%;
+  height: 80%;
+  padding:2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  input {
+    min-width: 15rem;
+    border: 2px solid $color-gray-1;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 18px;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  .dropdownMain {
+    position: relative;
+    cursor: pointer;
+
+    input {
+      margin-bottom: 1rem;
+      user-select: none;
+    }
+
+ 
+  }
+
+  .dropdownMainArrow{
+    position: absolute;
+    top:8px;
+    right:5px;
+    width: 22px;
+    height: 22px;
+  }
+.modalWrapper {
+ background-color: $color-gray-2;
+  position: relative;
+  border: 2px solid $color-gray-1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  input {
+    width: 10rem;
+    padding-left: 2rem;
+    border: 2px solid transparent;
+  }
+}
+
+.modalSearch {
+  display: inline-block;
+  position:absolute;
+  top:6px;
+  left:5px;
+  height: 20px;
+  width: 20px;
+}
+
+.modalItem {
+  border-top: 1px solid $color-gray-1;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-gray-0;
+  }
+}
+
+
+}
+
+.dark {
+  .dropdown {
+    input {
+      color:$color-gray-1;
+    }
+
+    &__modal {
+      &__wrapper {
+        background-color: $color-black-2;
+
+        &__item {
+          color: $color-gray-1;
+          &:hover {
+            background-color: $color-black-1;
+          }
+        }
+      }
+    }
+  }
+}
